@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.writeln("Hello");
+		function myFunc(){
+			document.writeln("This is a statement");
+		};
+		myFunc();
+		function myFunction(name,weather){
+			document.writeln("Hello "+name+".");
+			document.writeln("It is a "+weather+" today");
+		};  //函数明不能相同，即使引入的参数不同，因为JS是弱类型
+		myFunction("Nicholas","sunny");
+//定义会返回结果的函数
+		function myFunc2(name){
+			return("Hello "+name+".");
+		};
+		document.writeln(myFunc2("May"));
+		var myGlobalVar="apples";
+		function myFunc2(name){
+			var myLocalVar="sunny";
+			return("Hello "+name+". Today is "+myLocalVar+".")
+		};
+		document.writeln(myFunc2("May"));
+	</script>
+	<script type="text/javascript">
+		document.writeln("I like "+myGlobalVar+".");
+		var myData=new Object();
+		myData.name="May";
+		myData.weather="sunny";
+		document.writeln("Hello "+myData.name+".");
+		document.writeln("Today is "+myData.weather+"!");
+	</script>
+	<script type="text/javascript">
+		var myData={
+			name:"May",
+			weather:"sunny",
+			printMessages:function(){
+				document.writeln("Hello "+myData.name+".");
+				document.writeln("Today is "+myData.weather+"!");
+			}
+		};
+		myData.printMessages();
+	</script>
+
+</body>
+</html>

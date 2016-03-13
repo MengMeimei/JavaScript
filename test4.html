@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examples</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var myData={
+			name:"May",
+			weather:"sunny",
+			printMessages:function(){
+				document.writeln("Hello "+myData.name+".");
+				document.writeln("Today is "+myData["weather"]+"!");
+			}
+		};
+		// myData.name="Ama";
+		// myData["weather"]="raining";
+		// myData.printMessages();
+		// document.writeln("Hello "+myData.name+".");
+		// document.writeln("Today is "+myData["weather"]+"!");
+		for(var prop in myData){
+			document.writeln("Name: "+prop+" Value: "+myData[prop]);
+		}
+
+	</script>
+	<script type="text/javascript">
+		var myData={
+			name:"Adam",
+			weather:"sunny"
+		};
+		var hasName="name" in myData;
+		var hasData="data" in myData;
+		document.writeln("HasName: "+hasName);
+		document.writeln("HasData: "+hasData);
+	</script>
+</body>
+</html>
